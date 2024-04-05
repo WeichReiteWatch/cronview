@@ -20,7 +20,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "dub"
+  group: "cron"
   cancel-in-progress: false
 
 env:
@@ -41,7 +41,7 @@ env:
   #PLATFORMS: "linux/amd64,linux/arm64/v8"
 
 jobs:
-  dub:
+  cron:
     runs-on: ubuntu-latest
 #    container: ghcr.io/anyuser/anyimage:latest
 #    environment:
