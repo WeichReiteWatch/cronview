@@ -99,7 +99,7 @@ jobs:
                 git config --global core.sshCommand "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null -i /tmp/id_rsa"
                 git clone git@github.com:${{ github.repository_owner }}/cron.git
                 cd cron
-                time bash run.git     2>&1|while read a;do echo $(date +%F_%T)" "$a;done
+                time bash run.sh     2>&1|while read a;do echo $(date +%F_%T)" "$a;done
                 time bash run-pub.sh  2>&1|while read a;do echo $(date +%F_%T)" "$a;done
                 )
 #      - name: Setup Pages
