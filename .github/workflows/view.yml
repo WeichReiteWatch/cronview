@@ -1,4 +1,4 @@
-name: cron
+name: view
 
 on:
   # Runs on pushes targeting the default branch
@@ -41,7 +41,7 @@ env:
   #PLATFORMS: "linux/amd64,linux/arm64/v8"
 
 jobs:
-  cron:
+  view:
     runs-on: ubuntu-latest
 #    container: ghcr.io/anyuser/anyimage:latest
 #    environment:
